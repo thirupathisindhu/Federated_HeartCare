@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #b2ebf2);
+}
+
+/* Header */
+.header {
+    padding: 30px;
+    font-size: 34px;
+    text-align: center;
+    color: #004d40;
+    font-weight: bold;
+}
+
+.subtext {
+    text-align: center;
+    color: #00796b;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Card */
+.form-card {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: linear-gradient(145deg, #ffffff, #f1fbff);
+    border-radius: 18px;
+    border-left: 6px solid #00acc1;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 14px;
+    border-radius: 10px;
+    border: 1px solid #80deea;
+    font-size: 15px;
+    background-color: #f9feff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00acc1;
+    box-shadow: 0 0 0 2px rgba(0,172,193,0.2);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: linear-gradient(90deg,#26c6da,#00acc1);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(90deg,#00acc1,#00838f);
+}
+
+/* Results Panel */
+.results {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 14px;
+    background: #e0f2f1;
+    color: #004d40;
+    font-size: 14px;
+    white-space: pre-line;
+}

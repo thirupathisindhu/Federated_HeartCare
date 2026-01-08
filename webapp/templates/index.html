@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Federated HeartCare</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="header">
+    🫀 Federated HeartCare AI Platform
+</div>
+
+<div class="subtext">
+    Personalized Heart Health Monitoring & AI-Driven Insights
+</div>
+
+<div class="container">
+
+<div class="card form-card">
+<h3>Patient Health Details</h3>
+
+<form action="/run" method="get">
+    <input name="age" placeholder="Age" required>
+    <input name="bp" placeholder="Blood Pressure (e.g., 120/80)" required>
+    <input name="chol" placeholder="Cholesterol Level" required>
+    <input name="heart_rate" placeholder="Resting Heart Rate">
+    <input name="activity" placeholder="Daily Activity Level">
+    <input name="disease" placeholder="Known Conditions (e.g., Diabetes)">
+    <button type="submit">Analyze Patient</button>
+</form>
+</div>
+
+{% if logs %}
+<div class="card wide">
+<h3>AI Model Performance</h3>
+<img src="/static/performance.png" width="100%">
+</div>
+
+<div class="card wide">
+<h3>AI Diagnostic Logs</h3>
+{% for log in logs %}
+<div class="log-box">{{ log }}</div>
+{% endfor %}
+</div>
+{% endif %}
+
+</div>
+</body>
+</html>
